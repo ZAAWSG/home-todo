@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import { supabase } from "@/lib/supabaseClient";
-import StatusEditor from "@/components/StatusEditor";
+import { supabase } from "../lib/supabaseClient";
+import StatusEditor from "./StatusEditor";
 
 type Todo = {
   id: number;
