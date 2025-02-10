@@ -1,6 +1,6 @@
 import { supabase } from "@/lib/supabaseClient";
 
-export async function PUT(req: Request, { params }: { params: { id: number } }) {
+export async function PUT(req: Request, { params }: { params: { id: string } }) {
     const { status } = await req.json();
     const { error } = await supabase
         .from("todos")
@@ -15,7 +15,7 @@ export async function PUT(req: Request, { params }: { params: { id: number } }) 
 }
 
 
-export async function POST({ params }: { params: { id: number } }) {
+export async function POST({ params }: { params: { id: string } }) {
   const { error } = await supabase
     .from("todos")
     .update({ status: false })
